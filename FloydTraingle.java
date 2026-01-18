@@ -1,18 +1,20 @@
 import java.util.Scanner;
 
-public class DecrementedStarPattern {
+public class FloydTraingle {
     void print1(int row){
-        // 4 star pattern 
-        for(int i = 1; i <= row; i++){
-            System.out.println("");
-
-            for(int j = 0; j < row - i + 1 ; j++){
-                System.out.print("*");
+        int num = 1;
+        for(int i = 0; i <= row; i++){
+            for(int j = 0; j<= i;j++){
+                System.out.print(num +" ");
+                num += 1;
             }
+            System.out.println();
         }
+       
         
     }
 
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -20,7 +22,7 @@ public class DecrementedStarPattern {
         int rows = sc.nextInt();
         sc.close();
 
-        DecrementedStarPattern pattern = new DecrementedStarPattern();
+        FloydTraingle pattern = new FloydTraingle();
         pattern.print1(rows);
 
     

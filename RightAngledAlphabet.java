@@ -1,18 +1,18 @@
 import java.util.Scanner;
 
-public class DecrementedStarPattern {
+public class RightAngledAlphabet {
     void print1(int row){
-        // 4 star pattern 
         for(int i = 1; i <= row; i++){
-            System.out.println("");
-
-            for(int j = 0; j < row - i + 1 ; j++){
-                System.out.print("*");
+            for(char ch = 'A'; ch <'A' + i; ch++){
+                System.out.print(ch);
             }
+            System.out.println();
         }
+        
         
     }
 
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -20,7 +20,7 @@ public class DecrementedStarPattern {
         int rows = sc.nextInt();
         sc.close();
 
-        DecrementedStarPattern pattern = new DecrementedStarPattern();
+        RightAngledAlphabet pattern = new RightAngledAlphabet();
         pattern.print1(rows);
 
     
